@@ -3,29 +3,55 @@ import Child from "./Child";
 import { useState } from "react";
 
 const App = () => {
-    const [name, setName] = useState("Abinash");
+    const [name, setName] = useState("Abinash.");
     function updateData() {
-        setName("Abinash Sonar");
+        setName("Abinash Sonar.");
     }
     return (
-        <View
-            style={{
-                backgroundColor: "wheat",
-                flex: 10,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-            }}
-        >
-            <Text>Props in React</Text>
+        <View style={styles.container}>
+            <Text style={styles.heading}>Props in React</Text>
             <Child props={name} />
-            <TouchableOpacity onPress={updateData}>
-                <Text>Click Me</Text>
+            <TouchableOpacity style={styles.button} onPress={updateData}>
+                <Text style={styles.buttonText}>Click Me</Text>
             </TouchableOpacity>
         </View>
     );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: "wheat",
+        flex: 1,
+        display: "flex",
+        justifyContent: "space-evenly",
+        alignItems: "center",
+    },
+    heading: {
+        fontSize: 30,
+        marginVertical: 10,
+    },
+    name: {
+        fontSize: 20,
+        color: "red",
+    },
+    button: {
+        backgroundColor: "#fff",
+        paddingVertical: 8,
+        paddingHorizontal: 25,
+        borderRadius: 5,
+        borderWidth: 1,
+        borderColor: "#20232a",
+        // shadowNotWorking
+        shadowColor: "#171717",
+        shadowOffset: { width: -2, height: 4 },
+        shadowOpacity: 9,
+        shadowRadius: 3,
+    },
+    buttonText: {
+        letterSpacing: 1,
+        fontSize: 15,
+        fontWeight: "bold",
+    },
+});
 
 export default App;

@@ -4,11 +4,16 @@ import React from "react";
 const Child = (p) => {
     return (
         <View>
-            <Text>{p.props}</Text>
+            <Text style={styles.name}>{p.props}</Text>
         </View>
     );
 };
 
 export default Child;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    name: {
+        fontSize: 20,
+        letterSpacing: 1,
+    },
+});
