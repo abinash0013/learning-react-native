@@ -1,17 +1,34 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import {
+    StyleSheet,
+    Text,
+    View,
+    TouchableOpacity,
+    ScrollView,
+} from "react-native";
 import React from "react";
-import Input from "./Input";
+import ScrollViewExample from "./ScrollView";
 
-// input in react Native
+//Scrollview Example
 const App = () => {
     return (
         <View>
-            <Input />
+            <ScrollViewExample />
         </View>
     );
 };
 
 export default App;
+
+// input in react Native
+// const App = () => {
+//     return (
+//         <View>
+//             <Input />
+//         </View>
+//     );
+// };
+
+// export default App;
 
 // Listview in React Native
 // const App = () => {
