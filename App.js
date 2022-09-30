@@ -3,55 +3,92 @@ import Child from "./Child";
 import { useState } from "react";
 
 const App = () => {
-    const [name, setName] = useState("Abinash.");
-    function updateData() {
-        setName("Abinash Sonar.");
-    }
     return (
         <View style={styles.container}>
-            <Text style={styles.heading}>Props in React</Text>
-            <Child props={name} />
-            <TouchableOpacity style={styles.button} onPress={updateData}>
-                <Text style={styles.buttonText}>Click Me</Text>
-            </TouchableOpacity>
+            <View style={styles.redbox} />
+            <View style={styles.bluebox} />
+            <View style={styles.blackbox} />
         </View>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "wheat",
+        backgroundColor: "grey",
         flex: 1,
         display: "flex",
-        justifyContent: "space-evenly",
+        flexDirection: "column",
+        justifyContent: "space-between",
         alignItems: "center",
     },
-    heading: {
-        fontSize: 30,
-        marginVertical: 10,
+    redbox: {
+        backgroundColor: "red",
+        height: 100,
+        width: 100,
     },
-    name: {
-        fontSize: 20,
-        color: "red",
+    bluebox: {
+        backgroundColor: "blue",
+        height: 100,
+        width: 100,
     },
-    button: {
-        backgroundColor: "#fff",
-        paddingVertical: 8,
-        paddingHorizontal: 25,
-        borderRadius: 5,
-        borderWidth: 1,
-        borderColor: "#20232a",
-        // shadowNotWorking
-        shadowColor: "#171717",
-        shadowOffset: { width: -2, height: 4 },
-        shadowOpacity: 9,
-        shadowRadius: 3,
-    },
-    buttonText: {
-        letterSpacing: 1,
-        fontSize: 15,
-        fontWeight: "bold",
+    blackbox: {
+        backgroundColor: "black",
+        height: 100,
+        width: 100,
     },
 });
 
 export default App;
+// const App = () => {
+//     const [name, setName] = useState("Abinash.");
+//     function updateData() {
+//         setName("Abinash Sonar.");
+//     }
+//     return (
+//         <View style={styles.container}>
+//             <Text style={styles.heading}>Props in React</Text>
+//             <Child props={name} />
+//             <TouchableOpacity style={styles.button} onPress={updateData}>
+//                 <Text style={styles.buttonText}>Click Me</Text>
+//             </TouchableOpacity>
+//         </View>
+//     );
+// };
+
+// const styles = StyleSheet.create({
+//     container: {
+//         backgroundColor: "wheat",
+//         flex: 1,
+//         display: "flex",
+//         justifyContent: "space-evenly",
+//         alignItems: "center",
+//     },
+//     heading: {
+//         fontSize: 30,
+//         marginVertical: 10,
+//     },
+//     name: {
+//         fontSize: 20,
+//         color: "red",
+//     },
+//     button: {
+//         backgroundColor: "#fff",
+//         paddingVertical: 8,
+//         paddingHorizontal: 25,
+//         borderRadius: 5,
+//         borderWidth: 1,
+//         borderColor: "#20232a",
+//         // shadowNotWorking
+//         shadowColor: "#171717",
+//         shadowOffset: { width: -2, height: 4 },
+//         shadowOpacity: 9,
+//         shadowRadius: 3,
+//     },
+//     buttonText: {
+//         letterSpacing: 1,
+//         fontSize: 15,
+//         fontWeight: "bold",
+//     },
+// });
+
+// export default App;
