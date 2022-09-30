@@ -1,13 +1,12 @@
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import Child from "./Child";
 import { useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const App = () => {
-    const [data, setData] = useState("Abinash");
-
+    const [name, setName] = useState("Abinash");
     function updateData() {
-        setData("Abinah Sonar");
+        setName("Abinash Sonar");
     }
-
     return (
         <View
             style={{
@@ -18,7 +17,8 @@ const App = () => {
                 alignItems: "center",
             }}
         >
-            <Text>{data}</Text>
+            <Text>Props in React</Text>
+            <Child props={name} />
             <TouchableOpacity onPress={updateData}>
                 <Text>Click Me</Text>
             </TouchableOpacity>
