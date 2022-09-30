@@ -1,94 +1,40 @@
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
-import Child from "./Child";
-import { useState } from "react";
+import React from "react";
+import Input from "./Input";
 
+// input in react Native
 const App = () => {
     return (
-        <View style={styles.container}>
-            <View style={styles.redbox} />
-            <View style={styles.bluebox} />
-            <View style={styles.blackbox} />
+        <View>
+            <Input />
         </View>
     );
 };
 
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: "grey",
-        flex: 1,
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        alignItems: "center",
-    },
-    redbox: {
-        backgroundColor: "red",
-        height: 100,
-        width: 100,
-    },
-    bluebox: {
-        backgroundColor: "blue",
-        height: 100,
-        width: 100,
-    },
-    blackbox: {
-        backgroundColor: "black",
-        height: 100,
-        width: 100,
-    },
-});
-
 export default App;
+
+// Listview in React Native
 // const App = () => {
-//     const [name, setName] = useState("Abinash.");
-//     function updateData() {
-//         setName("Abinash Sonar.");
-//     }
+//     const data = [
+//         { id: 1, name: "John Doe" },
+//         { id: 2, name: "Victor Wayne" },
+//         { id: 3, name: "Jane Doe" },
+//     ];
 //     return (
-//         <View style={styles.container}>
-//             <Text style={styles.heading}>Props in React</Text>
-//             <Child props={name} />
-//             <TouchableOpacity style={styles.button} onPress={updateData}>
-//                 <Text style={styles.buttonText}>Click Me</Text>
-//             </TouchableOpacity>
+//         <View>
+//             <Text>
+//                 {data.map((item) => {
+//                     // alert(data.length);
+//                     <Text style={styles.text}>{item.name}</Text>;
+//                 })}
+//             </Text>
 //         </View>
 //     );
 // };
 
-// const styles = StyleSheet.create({
-//     container: {
-//         backgroundColor: "wheat",
-//         flex: 1,
-//         display: "flex",
-//         justifyContent: "space-evenly",
-//         alignItems: "center",
-//     },
-//     heading: {
-//         fontSize: 30,
-//         marginVertical: 10,
-//     },
-//     name: {
-//         fontSize: 20,
-//         color: "red",
-//     },
-//     button: {
-//         backgroundColor: "#fff",
-//         paddingVertical: 8,
-//         paddingHorizontal: 25,
-//         borderRadius: 5,
-//         borderWidth: 1,
-//         borderColor: "#20232a",
-//         // shadowNotWorking
-//         shadowColor: "#171717",
-//         shadowOffset: { width: -2, height: 4 },
-//         shadowOpacity: 9,
-//         shadowRadius: 3,
-//     },
-//     buttonText: {
-//         letterSpacing: 1,
-//         fontSize: 15,
-//         fontWeight: "bold",
-//     },
-// });
-
 // export default App;
+
+// const styles = StyleSheet.create({
+//     container: {},
+//     text: {},
+// });
